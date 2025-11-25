@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['headless.zbinfo.site'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'headless.zbinfo.site',
+      },
+    ],
   },
 }
 
