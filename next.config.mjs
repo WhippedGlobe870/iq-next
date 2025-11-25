@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
   reactCompiler: true,
-   images: {
+  images: {
     domains: ['headless.zbinfo.site'],
   },
-};
+  // Добавь эту настройку
+  distDir: '.next',
+  // Укажи путь к app директории
+  experimental: {
+    appDir: true,
+  },
+  // Если используешь кастомные пути
+  webpack: (config) => {
+    return config
+  }
+}
 
-export default nextConfig;
+module.exports = nextConfig
