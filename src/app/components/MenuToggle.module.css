@@ -1,0 +1,79 @@
+.toggle_item {
+    list-style: none;
+    gap: 15px 50px;
+    width: min-content;
+    grid-template-columns: repeat(2, 1fr);
+    display: none;
+    transition-behavior: allow-descrete;
+    transition: .3s;
+    transform: translateY(0px);
+
+}
+
+@starting-style {
+    .toggle_item {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.active {
+    display: grid;
+    transition: .3s;
+}
+
+.toggle_item li {
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.toggle_item li a {
+    font-size: 16px;
+    color: #001C1D;
+}
+
+.toggle_item li {
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.toggle_menu_buttons {
+    gap: 15px;
+    margin-bottom: 30px;
+    width: fit-content;
+    position: relative;
+}
+
+.toggle_menu_buttons button {
+    padding: 17px 20px;
+    border: 1px solid var(--main-green);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--main-green);
+    font-size: 16px;
+    width: 120px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.toggle_menu_buttons button span {
+    position: relative;
+    z-index: 1;
+}
+
+.toggle_menu_button_active {
+    color: #fff !important;
+}
+
+.button__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(50% - 7.5px);
+    /* половина ширины минус половина gap */
+    height: 100%;
+    background: var(--main-green);
+    transition: left 0.3s ease;
+    /* плавное смещение */
+    border-radius: 20px;
+}

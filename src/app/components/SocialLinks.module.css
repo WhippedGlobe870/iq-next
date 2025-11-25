@@ -1,0 +1,14 @@
+.social_links {
+    list-style: none;
+    gap: 20px;
+}
+
+.social_links_item a{
+    color: #fff;
+    gap: 8px;
+}
+
+.social_links_item a:hover{
+    color: #8AE5DA !important;
+    transition: .3s;
+}

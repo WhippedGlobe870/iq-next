@@ -1,0 +1,81 @@
+.menu__button {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: var(--main-green);
+    font-size: 20px;
+    gap: 7px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.menu__button>div {
+    flex-direction: column;
+    gap: 7px;
+    padding-right: 10px;
+    display: flex;
+    position: relative;
+}
+
+.menu__button>div span {
+    display: flex;
+    transition: .2s;
+}
+
+.menu__button>div span:nth-child(-n + 3) {
+    width: 33px;
+    height: 4px;
+    background-color: var(--main-green);
+    border-radius: 10px;
+}
+
+
+.menu__button>div span:nth-child(4) {
+    background-color: var(--main-green);
+    border-radius: 10px;
+    width: 4px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+
+.menu__button.active>div span:nth-child(4) {
+    opacity: 0;
+    transition: .2s;
+}
+
+.menu__button.active>div span:nth-child(2) {
+    opacity: 0;
+    transition: .2s;
+}
+
+
+.menu__button.active>div span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 10px);
+    transition: .2s;
+
+}
+
+.menu__button.active>div span:nth-child(3) {
+    transition: all .2s;
+    transform: rotate(45deg)translate(-5px, -10px);
+
+}
+.bodyMenuOpen{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.bodyMenuOpen::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: .3s;
+  backdrop-filter: blur(5px);
+}
