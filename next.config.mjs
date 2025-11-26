@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-  reactCompiler: true,
-   images: {
-    domains: ['headless.zbinfo.site'],
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'headless.zbinfo.site',
+      },
+    ],
   },
 };
 
